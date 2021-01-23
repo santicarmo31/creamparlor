@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4h-I8-k4w">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="creamparlor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVh-7K-TBz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IYJ-SS-UiL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UE2-3g-K01">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-De-6aI">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <color key="backgroundColor" red="0.04938351363" green="0.49087822440000001" blue="0.50484710929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="wvw-7g-0ar"/>
+                                </constraints>
+                                <state key="normal" title="Order 0 Items">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="orderItems:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AUh-bJ-1vs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UE2-3g-K01" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2rN-oC-diA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cN2-De-6aI" secondAttribute="bottom" id="Mbt-a0-jeV"/>
+                            <constraint firstItem="cN2-De-6aI" firstAttribute="top" secondItem="PVh-7K-TBz" secondAttribute="bottom" id="QoM-o8-H4E"/>
+                            <constraint firstItem="PVh-7K-TBz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a9h-Zs-2Te"/>
+                            <constraint firstItem="UE2-3g-K01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="auu-Yd-y29"/>
+                            <constraint firstItem="cN2-De-6aI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cD3-iF-LRv"/>
+                            <constraint firstItem="PVh-7K-TBz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f4f-wM-Dwd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cN2-De-6aI" secondAttribute="trailing" id="hFk-gH-E2b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PVh-7K-TBz" secondAttribute="trailing" id="vEn-6L-mV7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gZm-eb-DrG"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="UE2-3g-K01" id="8Q7-MB-GPP"/>
+                        <outlet property="collectionView" destination="PVh-7K-TBz" id="ltG-7g-8YL"/>
+                        <outlet property="orderButton" destination="cN2-De-6aI" id="ks6-As-Y3s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
+        </scene>
+        <!--Receipt View Controller-->
+        <scene sceneID="Nhn-nZ-Wel">
+            <objects>
+                <viewController storyboardIdentifier="Receipt" id="4Ud-z1-erA" customClass="ReceiptViewController" customModule="creamparlor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Sc-sz-DW9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="InI-aQ-bSz">
+                                <rect key="frame" x="20" y="94" width="374" height="648"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxO-kc-rRa">
+                                <rect key="frame" x="30" y="792" width="354" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UAk-Mr-bLd"/>
+                                </constraints>
+                                <state key="normal" title="START NEW ORDER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startNewOrder:" destination="4Ud-z1-erA" eventType="touchUpInside" id="sZe-wa-DBd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dXR-VE-8JT"/>
+                        <color key="backgroundColor" red="0.49809110159999997" green="0.81653279069999996" blue="0.82647198440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dXR-VE-8JT" firstAttribute="trailing" secondItem="InI-aQ-bSz" secondAttribute="trailing" constant="20" id="2nV-a8-4AA"/>
+                            <constraint firstItem="dXR-VE-8JT" firstAttribute="trailing" secondItem="XxO-kc-rRa" secondAttribute="trailing" constant="30" id="Aj8-c7-GNI"/>
+                            <constraint firstItem="XxO-kc-rRa" firstAttribute="top" secondItem="InI-aQ-bSz" secondAttribute="bottom" constant="50" id="EjW-zg-sfG"/>
+                            <constraint firstItem="XxO-kc-rRa" firstAttribute="leading" secondItem="dXR-VE-8JT" secondAttribute="leading" constant="30" id="P7V-iI-AVR"/>
+                            <constraint firstItem="InI-aQ-bSz" firstAttribute="leading" secondItem="dXR-VE-8JT" secondAttribute="leading" constant="20" id="ikM-Wk-DAO"/>
+                            <constraint firstItem="dXR-VE-8JT" firstAttribute="bottom" secondItem="XxO-kc-rRa" secondAttribute="bottom" constant="20" id="tXb-KX-JYt"/>
+                            <constraint firstItem="InI-aQ-bSz" firstAttribute="top" secondItem="dXR-VE-8JT" secondAttribute="top" constant="50" id="xde-4l-eF7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startNewOrderButton" destination="XxO-kc-rRa" id="pGK-v1-vxl"/>
+                        <outlet property="tableView" destination="InI-aQ-bSz" id="moF-LG-jPV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbL-wg-NKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947.826086956522" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lom-hU-Czo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z4h-I8-k4w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vEB-7i-0dE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g6A-3G-bvQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAz-8p-NL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
